@@ -1,7 +1,420 @@
-/*
-background-grey: #F4F3F4;
-button-purple: #192592
-main-titles dark-grey: #2C303F;
-paragraph grey: #5b5e6d;
-nav grey: #5b5e6d;
-*/
+/*issue with .menu pic--won't go back to extreme left side on smallest setting;
+"try-text" won't go above email input;
+email input and purple won't stretch to fit width;
+issue with .purple not going down (column) in .input stuff;
+largest viewport size: getting brands to be in 2 rows of 3 columns;
+getting nav elements to be horizontal in largest viewport*/
+
+body {
+  background-color: #f4f3f4;
+  max-width: 768px;
+  position:relative;
+}
+
+h1 {
+  color: #2c303f;
+  width:250px;
+}
+
+
+p {
+  color: #5b5e6d;
+}
+
+nav {
+  padding: 0 1rem;
+  color: #5b5e6d;
+  height:80px;
+  position: fixed;
+  display:flex;
+  flex-direction:row;
+justify-content:space-between;
+align-content:center;
+  top:0;
+  left:0;
+  right:0;
+  background-color: #f4f3f4;
+  border-bottom: 1px solid #5b5e6d;
+  margin: 0;
+}
+
+nav ul {
+  display: none;
+}
+
+.middle-pic {
+    height:80%;
+    width:auto;
+}
+
+.menu {
+  height: 30px;
+  position: absolute;
+  right:25px;
+  top:20px;
+
+
+}
+
+.slack-logo {
+  width: auto;
+  height: 60px;
+  position:absolute;
+  left:25px;
+  top:10px;
+}
+
+header {
+    display:flex;
+    flex-direction:column;
+    flex-wrap:nowrap;
+    margin: 80px 5%;
+}
+
+header img{
+    order:5;
+}
+
+header p {
+    width:80%;
+}
+
+
+
+.purple {
+    background-color: #192592;
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 1px grey;
+    font-weight:bold;
+    width:fit-content;
+}
+
+
+#brands {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  clear: both;
+  align-content: center;
+  padding: 25px;
+  margin:25px;
+  text-align:center;
+}
+
+#brands img{
+  max-height: 25px;
+  width: auto;
+  justify-content: center;
+  padding:20px;
+}
+
+.sign-in p{
+    text-align: center;
+    margin-bottom:50px;
+}
+
+.why-button {
+    display:flex;
+    justify-content: center;
+}
+.why {
+    background-color: white;
+    color:#192592;
+    padding:10px;
+    border: 1px solid #192592;
+    border-radius: 5px;
+    font-weight:bold;
+    width: 80%;
+}
+
+.brand-pics {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-bottom:1px solid rgba(128,128,128,0.25)
+}
+
+.logo-row,
+.logo-row2 {
+    display:flex;
+    flex-direction: column;
+    flex:1;
+}
+
+#try-it {
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+}
+
+.email-form {
+    background-color: f4f3f4;
+    padding: 10px;
+    border-color: rgba(128,128,128,0.25)
+}
+
+footer ul {
+    list-style-type: none;
+}
+
+.top-word {
+    font-weight:bold;
+}
+
+#bottom-row {
+    bottom: 0;
+    left:0;
+    right:0;
+    display:flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    font-weight: bold;
+    justify-content:space-evenly;
+    height:20px;
+    background-color: darkgrey;
+    padding:10px;
+
+}
+
+.more-grey,
+.bottom ul {
+    background-color: darkgrey;
+}
+
+#company-link-divs {
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    margin-top:150px;
+    margin-right:5%;
+    margin-left:5%;
+    flex:50%;
+
+}
+
+.logo-row2 .brand-pics:last-of-type{
+   border-bottom:none;
+
+}
+
+footer li {
+    padding: 10px;
+}
+
+#bottombottom {
+    background-color: darkgrey;
+    display:flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items:center;
+}
+
+#bottombottom img{
+    width:15px;
+    height:auto;
+}
+
+.socialmedia {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width:100px;
+    padding: 20px;
+    margin:auto;
+}
+
+.usflag {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    margin:auto;
+
+}
+
+.weelogo {
+    height:40px;
+    right:0;
+    left:0;
+    margin-bottom:20px;
+
+}
+
+.fas fa-chevron-down {
+    width:10px;
+    height:auto;
+}
+
+.try-text {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    width:60%;
+}
+
+
+
+@media (min-width: 768px){
+    #brands {
+        display: flex;
+        align-content: center;
+        padding: 25px;
+        margin:0px;
+        text-align:center;
+        flex-wrap: wrap;
+        flex-direction:row;
+      }
+.why-button {
+    display:flex;
+    flex-direction:column;
+    justify-items: center;
+}
+
+.why {
+    margin: 0 auto;
+    width:40%;
+      }
+
+      main > h2, p {
+          justify-content: left;
+      }
+      
+      .brand-pics {
+          margin-left:0;
+          margin-right:0;
+      }
+
+      .logo-row {
+        border-bottom:1px solid rgba(128,128,128,0.25);
+        border-right:1px solid rgba(128,128,128,0.25);
+        /*need to remove last border for Harvard */
+      }
+
+        .logo-row > .brand-pics:nth-of-type(3) {
+            border-bottom:none;
+        }
+
+        
+
+    footer {
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+      }
+.logo-row,
+      .logo-row2 {
+          display:flex;
+          flex-wrap:wrap;
+          margin-left:0;
+          margin-right:0;
+          flex:1;
+          width:50%;
+          border-bottom:none;
+      }
+
+      }
+      .input-stuff {
+        display:flex;
+        flex-direction:row;
+        justify-content:space-evenly;
+        flex-wrap:nowrap;
+        margin-left:0;
+        }
+
+     #try-it {
+           display:flex;
+           flex-direction:row;
+           justify-content: space-between;
+           
+        }
+        .try-text {
+            display: flex;
+            flex-direction: column;
+        text-align: left;       
+     }
+
+        .email-form {
+            width: 400px;
+            height:40px;
+            padding:0;
+            margin-right: 20px;
+        }
+
+        .purple {
+            height: 40px;
+            width:auto;
+            font-size: 70%;
+            margin:0;
+            text-justify: center;
+            align-items:center;
+            text-align:center;
+        }
+
+        h3 {
+            margin-bottom: 0px;
+        }
+
+
+  @media (min-width: 962px) {
+
+    #brands {
+display:flex;
+flex-direction:row;
+flex-wrap:wrap;
+}
+
+      .logo-row,
+      .logo-row2 {
+          display:flex;
+          flex-wrap:wrap;
+      }
+
+      .brand-pics {
+          margin-left:0;
+          margin-right:0;
+          flex:1;
+      }
+
+  }
+
+  @media (min-width: 1024px) {
+
+      .menu-choices > ul {
+          display: inline-flex;
+          list-style-type: none;
+          top:20px;
+          right:10px;
+          overflow:hidden;
+          white-space:nowrap;
+          justify-content: space-evenly;
+          width:500px;
+          align-items:baseline;
+      }
+
+      .menu-choices {
+          display:flex;
+          flex-direction: row;
+          justify-content: space-between;
+         
+       
+
+      }
+
+      .menu {
+        display:none;
+    }
+
+   .yourWorkspaces {
+        border: 2px solid rgba(128,128,128,0.25);
+        padding: 7px;
+
+    }
+      }
+
+      
